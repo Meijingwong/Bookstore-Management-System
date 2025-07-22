@@ -1,0 +1,436 @@
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Scroll container */
+.scroll-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+/* Modal styles */
+.editlayer {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.managemodal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.formclose-btn{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 5px;
+  color: #000;
+  transition: color 0.3s ease;
+}
+.formclose-btn:hover,
+.formclose-btn:focus {
+  color: red;
+  outline: none;
+}
+
+/* Table styles */
+.managetable {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.05);
+  border-radius: 0.8rem;
+   overflow-x: auto;
+  table-layout: fixed;        
+  word-wrap: break-word;      
+}
+
+
+.managetable td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  white-space: normal !important;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  vertical-align: top;
+}
+
+
+/* Center align all table headers */
+.managetable th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Left align the Name (2nd column) and Publisher (7th column) in table body */
+.managetable td:nth-child(2), 
+.managetable td:nth-child(5),  
+.managetable td:nth-child(7) {
+  text-align: left;
+  white-space: normal;
+  word-break: break-word;
+}
+
+
+
+.managetable thead th {
+  background-color: black;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s;
+  color: white;
+}
+
+.managetable tbody tr:nth-child(even) {
+  background-color: white;
+}
+
+.managetable tbody tr:hover {
+  background-color: #fff6;
+}
+
+.sort-indicator {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  color: #6c00bd;
+  display: inline;
+}
+
+/* Pagination styles */
+.managepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 1rem;
+}
+.managepage button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.2em;
+  transition: transform 0.2s;
+}
+.managepage button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.managepage button:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+
+/* Buttons */
+.btn-add {
+  background-color: #ffc107;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+.btn-add:hover {
+  background-color: #e0a800;
+}
+.btn-action {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  margin: 0 0.2rem;
+  font-size: 1.2em;
+  transition: transform 0.2s;
+}
+.btn-action:hover {
+  transform: scale(1.1);
+  color: #007bff;
+}
+
+/* Filters container */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+/* Modal form scroll */
+.managemodal-content form {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Price/Stock container */
+.price-stock-container {
+  display: flex;
+  gap: 10px;
+}
+.price-stock-container .manageform-group {
+  flex: 1;
+  margin-bottom: 15px;
+}
+
+/* Form groups */
+.manageform-group {
+  margin-bottom: 10px;
+}
+.manageform-group label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+}
+.manageform-control {
+  font-size: 14px;
+  padding: 6px 8px;
+}
+
+/* Dropdown input styling */
+.dropdown-with-input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+}
+.dropdown-with-input select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+/* Add more container */
+.add-more-container {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  background: #fff;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.add-more-container input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.add-more-container button {
+  margin-left: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+.add-more-container button:hover {
+  background-color: #0069d9;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 768px) {
+  .managetable {
+    display: table;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .managetable thead {
+    display: table-header-group;
+  }
+
+  .managetable tbody {
+    display: table-row-group;
+  }
+
+  .managetable tr {
+    display: table-row;
+  }
+
+  .managetable td,
+  .managetable th {
+    display: table-cell;
+    white-space: normal;
+    word-break: break-word;
+  }
+}
+
+/* Add to your CSS file */
+.managetable{
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.managetable{
+  min-width: 100%;
+  table-layout: fixed;
+  width: auto;
+}
+
+.managetable th,
+.managetable td {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding: 8px 12px;
+}
+
+/* Responsive table header alignment */
+
+@media (max-width: 768px) {
+  .managetable th {
+    font-size: 0.9rem;
+    padding: 6px 8px;
+  }
+  
+  .manage-filters-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .filter-item {
+    width: 100%;
+  }
+}
+
+/* Ensure text wraps in table cells */
+.managetable td {
+  word-break: break-word;
+}
+
+/* Adjust filter layout on small screens */
+@media (max-width: 576px) {
+  .d-flex.flex-wrap.gap-3 {
+    flex-direction: column;
+    gap: 10px !important;
+  }
+  
+  .d-flex.flex-wrap.gap-3 > div {
+    width: 100%;
+  }
+  
+  .manage-custom-dropdown {
+    width: 100% !important;
+  }
+}
+/* Dropdown styles */
+.genredownmenu,
+.typedownmenu,
+.publisheredownmenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1300;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 5px 0;
+}
+
+.dropddropitem {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+  text-align: center;
+}
+
+.dropddropitem:hover {
+  background-color: #f1f1f1;
+}
+.dropddropitem .delete-btn {
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Adjust the existing filters container */
+.manage-filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.manage-input-arrows {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  justify-content: center;
+  z-index: 3;
+}
+
+.manage-arrow-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  line-height: 1;
+  font-size: 1.1em;
+  color: #222;
+  cursor: pointer;
+  width: 1.3em;
+  height: 1em;
+  transition: color 0.2s;
+  outline: none;
+}
+
+.manage-arrow-btn:active {
+  color: #ff9800;
+}

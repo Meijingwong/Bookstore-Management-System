@@ -1,0 +1,39 @@
+.thank-you-container {
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background-color: #f8f9fa;
+  overflow: 'hidden';
+}
+
+.message-box {
+  transform: translateX(-50%);
+  width: 600px;
+  height: 250px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  line-height: 1.0;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.bookshelf-background {
+  width: 100%;
+  height: 120px;
+  background-image: url('src/assets/images/library-book-bookshelf-read.jpg'); 
+  opacity: 0.7;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  bottom: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.message-box {
+  animation: fadeIn 0.6s ease-out forwards;
+}

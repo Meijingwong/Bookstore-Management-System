@@ -1,0 +1,373 @@
+.display-main-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  margin-top: 22px;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.display-left {
+  width: 340px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.display-book-cover {
+  width: 255px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.10), 0 1.5px 6px rgba(0, 0, 0, 0.04);
+  margin-bottom: 24px;
+}
+
+.display-price-label {
+  font-size: 1.12rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  margin-top: 4px;
+}
+
+.display-price-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 22px;
+  margin-top: 2px;
+}
+
+.display-reviewbox {
+  width: 255px;
+  background: none;
+  margin-top: 125px;
+  border-radius: 0;
+  padding: 0;
+}
+
+.display-reviewbox .review-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.display-reviewbox .review-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.05rem;
+}
+
+.display-reviewbox .review-rating-row .star {
+  color: #c96d00;
+  font-size: 1.08rem;
+}
+
+.display-reviewbox .review-rating-row .review-rating-score {
+  font-weight: 600;
+  margin-left: 2px;
+  font-size: 1.02rem;
+}
+
+.display-reviewbox .review-count {
+  color: #888;
+  margin-bottom: 7px;
+  font-size: 0.95rem;
+}
+
+.display-reviewbox .review-bars {
+  width: 100%;
+  margin-bottom: 7px;
+}
+
+.display-reviewbox .review-bars-row {
+  display: flex;
+  align-items: center;
+  font-size: 0.97rem;
+  margin-bottom: 2px;
+}
+
+.display-reviewbox .review-bars-row span {
+  width: 33px;
+  color: #444;
+}
+
+.display-reviewbox .review-bar-track {
+  width: 98px;
+  height: 9px;
+  background: #eee;
+  border-radius: 6px;
+  margin: 0 6px 0 4px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.display-reviewbox .review-bar-fill {
+  background: #f7ca56;
+  height: 100%;
+  border-radius: 6px;
+}
+
+.display-reviewbox .review-bars-row .bar-label {
+  font-size: 0.97rem;
+  color: #444;
+  margin-left: 2px;
+}
+
+.display-reviewbox .review-link {
+  color: #007185;
+  font-size: 13px;
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 2px;
+}
+
+.display-reviewbox .review-product-title {
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 3px;
+}
+
+.display-reviewbox .review-btn {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+.display-right {
+  flex: 1 1 0;
+  min-width: 400px;
+  max-width: 830px;
+  display: flex;
+  flex-direction: column;
+}
+
+.display-title-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0;
+  gap: 18px;
+}
+
+.display-title {
+  font-size: 2.32rem;
+  font-weight: bold;
+  line-height: 1.08;
+  margin: 0;
+  margin-right: 14px;
+}
+
+.display-title-row .star {
+  color: #c96d00;
+  font-size: 1.22rem;
+  margin-right: -2px;
+}
+
+.display-title-row .score {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #444;
+  margin-left: 7px;
+}
+
+.display-ratings-bar-area {
+  display: flex;
+  align-items: center;
+  margin: 7px 0 9px 0;
+  gap: 20px;
+}
+
+.display-ratings-bar-img {
+  height: 44px;
+  width: 167px;
+  object-fit: contain;
+  margin-right: 7px;
+}
+
+.display-divider {
+  border-top: 1px solid #888;
+  margin: 16px 0 18px 0;
+  width: 100%;
+}
+
+.display-description {
+  font-size: 1.02rem;
+  color: #222;
+  max-width: 670px;
+  margin-bottom: 22px;
+  margin-top: 0;
+}
+
+.display-description .desc-readmore {
+  color: #007185;
+  font-size: 15px;
+  text-decoration: underline;
+  margin-left: 2px;
+  cursor: pointer;
+}
+
+.display-meta-table {
+  display: grid;
+  grid-template-columns: 120px 1fr 100px 1fr;
+  row-gap: 7px;
+  font-size: 1.07rem;
+  font-weight: 600;
+  margin-bottom: 22px;
+  max-width: 670px;
+}
+
+.display-meta-table span {
+  font-weight: 600;
+}
+
+.display-meta-table .meta-value {
+  font-weight: 400;
+}
+
+/* --- Reviews block --- */
+.display-reviews-list {
+  max-width: 670px;
+  margin-top: 28px;
+}
+
+.display-review-card {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 14px;
+}
+
+.display-review-user-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 2px;
+}
+
+.display-review-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.display-review-username {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 7px;
+}
+
+.display-review-title {
+  font-size: 0.97rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.display-review-rating {
+  color: #c96d00;
+  font-size: 1.05rem;
+  margin-top: 1px;
+  margin-bottom: 2px;
+}
+
+.display-review-country-date {
+  font-size: 0.93rem;
+  color: #444;
+  margin-bottom: 1px;
+}
+
+.display-review-text {
+  font-size: 1.01rem;
+  margin: 4px 0 3px 0;
+  color: #222;
+}
+
+.display-review-actions {
+  display: flex;
+  gap: 17px;
+  margin-top: 4px;
+  align-items: center;
+}
+
+.display-review-actions .review-helpful {
+  font-size: 13px;
+  color: #666;
+}
+
+.display-review-actions .review-btn {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+  padding: 3px 11px;
+  font-size: 0.98rem;
+  cursor: pointer;
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+.display-review-actions .review-report {
+  border: none;
+  background: none;
+  color: #007185;
+  font-size: 0.98rem;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 0;
+}
+
+.sparkle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+  animation: sparkleFade 3s ease-in-out forwards;
+  pointer-events: none;
+}
+
+/* Sparkle shapes */
+.sparkle.star {
+  background-color: gold;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%,
+      79% 91%, 50% 70%, 21% 91%, 32% 57%,
+      2% 35%, 39% 35%);
+}
+
+.sparkle.diamond {
+  background-color: cyan;
+  transform: rotate(45deg);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.sparkle.circle {
+  background-color: hotpink;
+  border-radius: 50%;
+}
+
+/* duration for the sparkle Animation */
+@keyframes sparkleFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0deg);
+  }
+
+  20% {
+    opacity: 1;
+    transform: scale(1.2) rotate(45deg);
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(1) rotate(135deg);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.5) rotate(180deg);
+  }
+}

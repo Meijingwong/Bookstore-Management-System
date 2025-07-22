@@ -1,0 +1,122 @@
+.profile-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 0 20px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 1800px;
+  background-color: transparent;
+  padding: 80px;
+}
+
+
+
+
+.profile-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-picture img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.profile-name {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.profile-position {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.profile-right {
+  flex: 3;
+  margin-left: 50px;
+}
+
+.profile-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  margin-left: 15px;
+}
+
+.profile-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+.profile-info .info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.info-label {
+  font-weight: normal;
+  flex: 1;
+  text-align: left;
+}
+
+.info-value {
+  flex: 3;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-password-icon {
+  font-size: 1.2rem;
+  color: #007bff;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.info-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.info-label {
+  font-weight: bold;
+  flex: 0 0 200px;
+  text-align: left;
+  white-space: nowrap;
+  margin-right: 20px;
+}
+
+.info-value {
+  flex: 1;
+  text-align: left;
+  position: relative;
+}
+
+
+.profile-info {
+  margin-left: 20px;
+}

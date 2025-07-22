@@ -1,0 +1,244 @@
+
+.admin-login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: url(../assets/images/sigin.png) no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+
+.admin-login-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 128, 0, 0.2);
+  z-index: 0;
+}
+
+
+.admin-login-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 50px 10px 40px 0;
+  gap: 15px;
+  z-index: 1;
+}
+
+.admin-login-logo {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.admin-login-logo-container h3 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.admin-login-logo-container p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+
+.admin-login-form-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+
+.admin-login-form-floating {
+  margin-bottom: 6px;
+}
+
+.admin-login-form-floating input {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 6px;
+  font-size: 0.85rem;
+}
+
+.admin-login-btn {
+  background-color: #333;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  padding: 6px 10px;
+  margin-top: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+}
+
+.admin-login-btn:hover {
+  background-color: #555;
+  transition: background-color 0.3s ease;
+}
+
+.admin-login-btn:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+.admin-login-link {
+  font-size: 0.8rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.admin-login-link:hover {
+  text-decoration: underline;
+  color: #555;
+}
+
+.admin-login-text-center {
+  margin-top: 8px;
+  text-align: center;
+}
+
+
+.admin-login-otp-timer {
+  color: #198754;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.admin-login-otp-expired {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+.admin-login-otp-message {
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.admin-login-otp-timer-container {
+  min-height: 28px;
+}
+
+
+.admin-login-modal-backdrop {
+  position: fixed;
+  z-index: 1050;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-login-modal-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem 1.2rem;
+  max-width: 320px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.admin-login-modal-btn {
+  width: 90px;
+  padding: 6px 12px;
+}
+
+
+.admin-login-toggle-password-icon {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+
+.admin-login-invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875em;
+  display: block;
+  margin-top: 4px;
+}
+
+
+.admin-login-password-hint {
+  color: #dc3545;
+  font-size: 0.875em;
+  margin-top: 4px;
+}
+
+
+.admin-login-otp-input-group {
+  position: relative;
+}
+
+.admin-login-resend-btn {
+  width: 90px;
+  min-width: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.admin-login-resend-btn:hover,
+.admin-login-resend-btn:focus {
+  background-color: #222;
+  color: #fff;
+  border-color: #222;
+}
+
+
+@media screen and (max-width: 768px) {
+  .admin-login-container {
+    padding: 10px;
+  }
+  
+  .admin-login-logo {
+    width: 40px;
+  }
+  
+  .admin-login-logo-container {
+    margin-bottom: 40px;
+  }
+  
+  .admin-login-form-container {
+    margin-top: 150px;
+  }
+  
+  .admin-login-form-floating input,
+  .form-select {
+    padding: 5px;
+  }
+  
+  .admin-login-btn {
+    padding: 6px 8px;
+  }
+}

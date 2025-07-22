@@ -1,0 +1,98 @@
+-- Create ADMIN Table
+CREATE TABLE ADMIN (
+    admin_ID INT AUTO_INCREMENT PRIMARY KEY,
+    admin_name VARCHAR(30) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    gender ENUM('Male', 'Female') NOT NULL,
+    email VARCHAR(50) NOT NULL UNIQUE,
+    contact_num VARCHAR(30) NOT NULL,
+    position VARCHAR(30) NOT NULL,
+   
+);
+
+-- Create PUBLISHER Table
+CREATE TABLE PUBLISHER (
+    publisher_ID INT AUTO_INCREMENT PRIMARY KEY,
+    publisher_name VARCHAR(50) NOT NULL
+);
+
+-- Create GENRE Table
+CREATE TABLE GENRE (
+    genre_ID INT PRIMARY KEY AUTO_INCREMENT,
+    genre VARCHAR(30) NOT NULL UNIQUE
+);
+
+-- Create BOOK_TYPE Table
+CREATE TABLE BOOK_TYPE (
+    book_type_ID INT PRIMARY KEY AUTO_INCREMENT,
+    book_type VARCHAR(50) NOT NULL UNIQUE
+);
+
+-- Create BOOK Table
+CREATE TABLE BOOK (
+    book_ISBN VARCHAR(20) PRIMARY KEY,
+    book_name VARCHAR(100) NOT NULL,
+    book_img VARCHAR(255) NOT NULL,
+    unit_price DECIMAL(10, 2) NOT NULL,
+    stock INT NOT NULL,
+    sales INT NOT NULL DEFAULT 0,
+    publisher_ID INT NOT NULL,
+    author VARCHAR(50) NOT NULL,
+    genre_ID INT,
+    book_type_ID INT,
+    FOREIGN KEY (genre_ID) REFERENCES GENRE(genre_ID) ON DELETE SET NULL,
+    FOREIGN KEY (book_type_ID) REFERENCES BOOK_TYPE(book_type_ID) ON DELETE SET NULL,
+    FOREIGN KEY (publisher_ID) REFERENCES PUBLISHER(publisher_ID)
+);
+
+-- Create FEEDBACK Table
+CREATE TABLE FEEDBACK (
+    feedback_ID INT AUTO_INCREMENT PRIMARY KEY,
+    book_ISBN VARCHAR(20),
+    rating INT(5),
+    comment VARCHAR(300),
+    FOREIGN KEY (book_ISBN) REFERENCES BOOK(book_ISBN)
+);
+
+-- Create PURCHASES_RECORDS Table
+CREATE TABLE PURCHASES_RECORDS (
+    purchase_ID INT AUTO_INCREMENT PRIMARY KEY,
+    date DATE NOT NULL,
+    publisher_ID INT,
+    admin_ID INT,
+    FOREIGN KEY (publisher_ID) REFERENCES PUBLISHER(publisher_ID),
+    FOREIGN KEY (admin_ID) REFERENCES ADMIN(admin_ID)
+);
+
+-- Create PURCHASES_ITEMS Table
+CREATE TABLE PURCHASES_ITEMS (
+    item_ID INT AUTO_INCREMENT PRIMARY KEY,
+    book_ISBN VARCHAR(20),
+    book_qty INT NOT NULL,
+    total_cost DECIMAL(10, 2) NOT NULL,
+    purchase_ID INT,
+    FOREIGN KEY (book_ISBN) REFERENCES BOOK(book_ISBN),
+    FOREIGN KEY (purchase_ID) REFERENCES PURCHASES_RECORDS(purchase_ID)
+);
+
+-- Create MEMBERSHIP Table
+CREATE TABLE MEMBERSHIP (
+    member_ID INT AUTO_INCREMENT PRIMARY KEY,
+    member_name VARCHAR(50) NOT NULL,
+    phone_num VARCHAR(30) NOT NULL,
+    total_spent DECIMAL(10, 2) NOT NULL,
+    is_eligible_gift BOOLEAN NOT NULL,
+    gift_get VARCHAR(50) NOT NULL
+);
+
+-- Create SALES_RECORDS Table
+CREATE TABLE SALES_RECORDS (
+    sales_ID INT AUTO_INCREMENT PRIMARY KEY,
+    book_ISBN VARCHAR(20),
+    quantity INT NOT NULL,
+    total_price DECIMAL(10, 2) NOT NULL,
+    transaction_date DATE NOT NULL,
+    member_ID INT,
+    FOREIGN KEY (book_ISBN) REFERENCES BOOK(book_ISBN),
+    FOREIGN KEY (member_ID) REFERENCES MEMBERSHIP(member_ID)
+);
